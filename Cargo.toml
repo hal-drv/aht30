@@ -1,0 +1,20 @@
+[package]
+name = "aht30"
+version = "0.0.1"
+edition = "2024"
+license = "MIT"
+description = "Correct AHT10 / AHT20 / AHT30 / AHT40 humidity temperature sensor driver, on embedded-hal, optional async."
+documentation = "https://docs.rs/aht30"
+repository = "https://github.com/hal-drv/aht30"
+keywords = ["embedded-hal", "aht10", "aht20", "aht30", "aht40"]
+readme = "README.md"
+
+[dependencies]
+embedded-hal = "1"
+embedded-hal-async = { version = "1", optional = true }
+maybe-async-cfg = "0.2"
+defmt = { version = "1", optional = true }
+
+[features]
+async = ["dep:embedded-hal-async"]
+defmt = ["dep:defmt"]
