@@ -33,6 +33,18 @@ pub enum SensorError {
     Checksum,
 }
 
+impl core::fmt::Display for SensorError {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        f.write_str(match self {
+            SensorError::Io => "io failed",
+            SensorError::Timeout => "operation timeout",
+            SensorError::Checksum => "checksum mismatch",
+        })
+    }
+}
+
+impl core::error::Error for SensorError {}
+
 impl<E: embedded_hal::i2c::Error> From<E> for SensorError {
     fn from(_value: E) -> Self {
         SensorError::Io
