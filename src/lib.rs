@@ -316,6 +316,7 @@ pub const AHT40_DEFAULT_ADDR: u8 = 0x44;
 /// - [AHT20-F温湿度传感器说明书中文版A3-202407.pdf](https://www.aosong.com/uploadfiles/2025/04/20250425154457582.pdf)
 /// - [DHT11温湿度传感器说明书(中)A0-1208.pdf](https://www.aosong.com/uploadfiles/2025/03/20250305165717988.pdf)
 /// - [AHT2系列温湿度传感器IIC例程.zip](https://www.aosong.com/uploadfiles/2025/02/20250211143151669.zip)
+/// - [PCB-AHT20](https://oshwhub.com/xh_timmo/aht20-wen-shi-du-chuan-gan-qi)
 #[cfg(test)]
 mod tests {
     use super::*;
