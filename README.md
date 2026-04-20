@@ -72,7 +72,16 @@ let (humidity, temperature) = aht40.read(true).await?.decode();
 <details>
 <summary>Click to show</summary>
 
-<img alt="screenshot-solution" loading="lazy" width="692" height="774" src="https://github.com/kkocdko/kblog/releases/download/simple_storage/hal-drv_aht30_1.webp">
+Below left-to-right are aht10, aht30, and aht40, with 2.45mm connector:
+
+<img alt="real-hardware-photo" loading="lazy" width="1620" height="960" src="https://github.com/kkocdko/kblog/releases/download/simple_storage/hal-drv_aht30_1.webp">
+
+<!--
+magick montage pic_aht10.png pic_aht30.png pic_aht40.png -tile 3x2 -geometry +4+4 -background grey50 2-combined.png
+magick convert 2-combined.png -shave 4x4 3-stripped.png
+~/misc/res/imgbench/zcodecs12 cwebp -m 6 -sharp_yuv -metadata none -noalpha -resize 1620 960 -sharpness 5 3-stripped.png -o 4-compressed.webp
+mv 4-compressed.webp hal-drv_aht30_1.webp
+-->
 
 </details>
 
