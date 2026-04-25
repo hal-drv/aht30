@@ -6,7 +6,7 @@ license = "MIT"
 description = "Better AHT10 / AHT20 / AHT30 / AHT40 humidity temperature sensor driver, for rust embedded-hal, optional async."
 documentation = "https://docs.rs/aht30"
 repository = "https://github.com/hal-drv/aht30"
-keywords = ["embedded-hal", "aht10", "aht20", "aht30", "aht40"]
+keywords = ["embedded-hal", "aht10", "aht20", "aht30", "aht40"] # keyword from https://docs.rs/embedded-hal#platform-agnostic-drivers
 readme = "README.md"
 
 [dependencies]

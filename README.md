@@ -47,16 +47,16 @@ let (humidity, temperature) = aht10.read()?.decode();
 
 ### AHT20 / AHT25 / AHT30, async
 
-For sync usage, see aht10 example. Just remove `Async` suffix in name.
-
 ```rust
-use aht30::{AHT20_DEFAULT_ADDR, Aht20Async};
+use aht30::{AHT20_DEFAULT_ADDR, Aht20Async}; // the AHT20 / AHT25 / AHT30 use same protocol and default address
 let mut aht20 = Aht20Async::new(AHT20_DEFAULT_ADDR, i2c, Delay);
 // do calibrate may not be required for models manufactured after 2022, but still recommended
 aht20.calibrate().await?;
 // enable checksum is recommended
 let (humidity, temperature) = aht20.read(true).await?.decode();
 ```
+
+For sync usage, see AHT10 example. Just remove `Async` suffix in name.
 
 ### AHT40, async
 
@@ -70,9 +70,9 @@ let (humidity, temperature) = aht40.read(true).await?.decode();
 ## Details
 
 <details>
-<summary>Click to show</summary>
+<summary>Real hardware photo (click to show)</summary>
 
-Below left-to-right are aht10, aht30, and aht40, with 2.45mm connector:
+Below left-to-right are AHT10, AHT30, and AHT40, with 2.45mm connector:
 
 <img alt="real-hardware-photo" loading="lazy" width="1620" height="960" src="https://github.com/kkocdko/kblog/releases/download/simple_storage/hal-drv_aht30_1.webp">
 
@@ -87,7 +87,7 @@ mv 4-compressed.webp hal-drv_aht30_1.webp
 
 ## Contributors
 
-[![Contributors](https://hub-io-mcells-projects.vercel.app/r/hal-drv/aht30)](https://github.com/hal-drv/aht30/graphs/contributors)
+![Contributors](https://hub-io-mcells-projects.vercel.app/r/hal-drv/aht30)
 
 ## License
 

@@ -233,8 +233,7 @@ impl<I: I2cAsync, D: DelayNsAsync> Aht20Async<I, D> {
         })
     }
 }
-pub use Aht10Measurement as Aht20Measurement; // aht20 and aht10 use same decode formula
-pub const AHT20_DEFAULT_ADDR: u8 = 0x38;
+pub use {AHT10_DEFAULT_ADDR as AHT20_DEFAULT_ADDR, Aht10Measurement as Aht20Measurement}; // aht20 and aht10 use the same decode formula and default i2c address 
 
 /// AHT40 sensor.
 #[maybe_async_cfg::maybe(
