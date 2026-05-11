@@ -16,5 +16,6 @@ maybe-async-cfg = "0.2"
 defmt = { version = "1", optional = true }
 
 [features]
+default = []
 async = ["dep:embedded-hal-async"]
 defmt = ["dep:defmt"]
